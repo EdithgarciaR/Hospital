@@ -1,0 +1,290 @@
+/* ===========================================
+   Sistema de Gestion Hospitalaria
+   Estilos generales del proyecto
+   =========================================== */
+
+/* Colores principales del sistema (morado y blanco) */
+:root {
+    --primary-color: #6f42c1;
+    --primary-dark: #59339d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --bg-color: #f5f3fa;
+    --text-color: #2e2540;
+    --border-color: #e2d9f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+/* Sobreescribimos los colores por defecto de Bootstrap (azul)
+   para que todo el sistema use el morado como color principal */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.table-primary {
+    --bs-table-bg: #ede7f6;
+}
+
+/* =======================
+   LOGIN Y REGISTRO
+======================= */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    background: white;
+}
+
+.login-card h2 {
+    font-weight: 700;
+}
+
+.login-card .form-control {
+    height: 44px;
+    border-radius: 6px;
+}
+
+.login-card button {
+    height: 44px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+.navbar {
+    height: 65px;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navbar span {
+    font-size: 14px;
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+
+.sidebar {
+    min-height: calc(100vh - 65px);
+    background: white;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar .list-group-item {
+    border: none;
+    padding: 14px 20px;
+    font-weight: 500;
+}
+
+.sidebar .list-group-item:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.sidebar .active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* =======================
+   DASHBOARD
+======================= */
+
+.dashboard-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.dashboard-card .card-body {
+    text-align: center;
+}
+
+.dashboard-card h5 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.dashboard-card h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* Las tarjetas de "Doctores" y "Pacientes" tambien quedan en tonos morados */
+.dashboard-card.bg-success {
+    background-color: var(--primary-color) !important;
+}
+
+.dashboard-card.bg-warning {
+    background-color: #d9c9f1 !important;
+    color: var(--text-color) !important;
+}
+
+/* =======================
+   TABLAS
+======================= */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.card-header {
+    font-weight: 700;
+    background-color: #f0eaf9 !important;
+}
+
+/* =======================
+   BOTONES
+======================= */
+
+.btn {
+    border-radius: 6px;
+}
+
+.btn-success,
+.btn-danger,
+.btn-warning {
+    font-weight: 600;
+}
+
+/* =======================
+   FORMULARIOS
+======================= */
+
+.form-control,
+.form-select {
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* =======================
+   BADGES
+======================= */
+
+.badge {
+    font-size: 13px;
+    padding: 6px 10px;
+}
+
+/* =======================
+   MENSAJES
+======================= */
+
+.alert {
+    border-radius: 6px;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 991px) {
+    .sidebar {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-bottom: 15px;
+    }
+
+    .navbar span {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        margin: 15px;
+    }
+}
